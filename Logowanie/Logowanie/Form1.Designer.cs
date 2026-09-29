@@ -56,14 +56,14 @@
             // 
             // textBoxLogin
             // 
-            textBoxLogin.Location = new Point(44, 108);
+            textBoxLogin.Location = new Point(39, 85);
             textBoxLogin.Name = "textBoxLogin";
-            textBoxLogin.Size = new Size(100, 23);
+            textBoxLogin.Size = new Size(165, 23);
             textBoxLogin.TabIndex = 2;
             // 
             // buttonLogowanie
             // 
-            buttonLogowanie.Location = new Point(542, 344);
+            buttonLogowanie.Location = new Point(39, 311);
             buttonLogowanie.Name = "buttonLogowanie";
             buttonLogowanie.Size = new Size(75, 23);
             buttonLogowanie.TabIndex = 3;
@@ -73,15 +73,15 @@
             // 
             // textBoxHaslo
             // 
-            textBoxHaslo.Location = new Point(44, 241);
+            textBoxHaslo.Location = new Point(39, 221);
             textBoxHaslo.Name = "textBoxHaslo";
-            textBoxHaslo.Size = new Size(100, 23);
+            textBoxHaslo.Size = new Size(165, 23);
             textBoxHaslo.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(427, 139);
+            label1.Location = new Point(241, 319);
             label1.Name = "label1";
             label1.Size = new Size(38, 15);
             label1.TabIndex = 5;

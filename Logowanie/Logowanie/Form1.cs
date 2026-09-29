@@ -28,7 +28,7 @@ namespace Logowanie
             using var zawartoscZapytania = new StringContent(daneJson, Encoding.UTF8, "application/json");
             try
             {
-                HttpResponseMessage response = await klient.PostAsync("", zawartoscZapytania);
+                HttpResponseMessage response = await klient.PostAsync("https://api.54-36-162-208.sslip.io/api/auth/login", zawartoscZapytania);
                 string wynik =await response.Content.ReadAsStringAsync();
 
                 label1.Text = wynik;
