@@ -1,6 +1,8 @@
 using System.Net.Http;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Text.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Logowanie
 {
@@ -13,7 +15,7 @@ namespace Logowanie
 
         private async void buttonLogowanie_Click(object sender, EventArgs e)
         {
-            using HttpClient client = new HttpClient();
+            using HttpClient klient = new HttpClient();
 
             var dane = new
             {
@@ -21,7 +23,20 @@ namespace Logowanie
                 haslo = textBoxHaslo.Text,
             };
 
-            string json = JsonSerializer.Serialize(dane);
+            string daneJson = JsonSerializer.Serialize(dane);
+            
+            using var zawartoscZapytania = new StringContent(daneJson, Encoding.UTF8, "application/json");
+            try
+            {
+                HttpResponseMessage response = await klient.PostAsync("", zawartoscZapytania);
+                string wynik =await response.Content.ReadAsStringAsync();
+
+                label1.Text = wynik;
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show("Błąd: " + ex.Message);
+            }
         }
     }
 }

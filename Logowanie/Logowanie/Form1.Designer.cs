@@ -33,6 +33,7 @@
             textBoxLogin = new TextBox();
             buttonLogowanie = new Button();
             textBoxHaslo = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // labelLogin
@@ -77,11 +78,21 @@
             textBoxHaslo.Size = new Size(100, 23);
             textBoxHaslo.TabIndex = 4;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(427, 139);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 5;
+            label1.Text = "label1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(textBoxHaslo);
             Controls.Add(buttonLogowanie);
             Controls.Add(textBoxLogin);
@@ -100,5 +111,6 @@
         private TextBox textBoxLogin;
         private Button buttonLogowanie;
         private TextBox textBoxHaslo;
+        private Label label1;
     }
 }
