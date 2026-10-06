@@ -16,7 +16,6 @@ namespace Logowanie
         private async void buttonLogowanie_Click(object sender, EventArgs e)
         {
             using HttpClient klient = new HttpClient();
-
             var dane = new
             {
                 login = textBoxLogin.Text,
@@ -24,15 +23,25 @@ namespace Logowanie
             };
 
             string daneJson = JsonSerializer.Serialize(dane);
-            
             using var zawartoscZapytania = new StringContent(daneJson, Encoding.UTF8, "application/json");
             try
             {
                 HttpResponseMessage response = await klient.PostAsync("https://api.54-36-162-208.sslip.io/api/auth/login", zawartoscZapytania);
                 string wynik =await response.Content.ReadAsStringAsync();
-
-                label1.Text = wynik;
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Zalogowano");
+                    var profilForm = new ProfilForm();
+                    this.Hide();
+                    profilForm.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Niezalogowano" + wynik);
+                }
             }
+
             catch (HttpRequestException ex)
             {
                 MessageBox.Show("Błąd: " + ex.Message);
