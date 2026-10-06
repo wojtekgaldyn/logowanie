@@ -18,7 +18,7 @@ namespace Logowanie
             using HttpClient klient = new HttpClient();
             var dane = new
             {
-                login = textBoxLogin.Text,
+                email = textBoxEmail.Text,
                 haslo = textBoxHaslo.Text,
             };
 
@@ -30,8 +30,9 @@ namespace Logowanie
                 string wynik =await response.Content.ReadAsStringAsync();
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Zalogowano");
-                    var profilForm = new ProfilForm();
+                    OdpowiedzNaLogowanie odpowiedzNaLogowanie = JsonSerializer.Deserialize<OdpowiedzNaLogowanie>(wynik);
+                    string token = odpowiedzNaLogowanie.Token;
+                    var profilForm = new ProfilForm(token);
                     this.Hide();
                     profilForm.ShowDialog();
                     this.Show();

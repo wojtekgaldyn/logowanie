@@ -30,7 +30,7 @@
         {
             labelLogin = new Label();
             labelHaslo = new Label();
-            textBoxLogin = new TextBox();
+            textBoxEmail = new TextBox();
             buttonLogowanie = new Button();
             textBoxHaslo = new TextBox();
             SuspendLayout();
@@ -40,9 +40,9 @@
             labelLogin.AutoSize = true;
             labelLogin.Location = new Point(39, 56);
             labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(70, 15);
+            labelLogin.Size = new Size(72, 15);
             labelLogin.TabIndex = 0;
-            labelLogin.Text = "Podaj login:";
+            labelLogin.Text = "Podaj email:";
             // 
             // labelHaslo
             // 
@@ -53,12 +53,12 @@
             labelHaslo.TabIndex = 1;
             labelHaslo.Text = "Podaj haslo:";
             // 
-            // textBoxLogin
+            // textBoxEmail
             // 
-            textBoxLogin.Location = new Point(39, 85);
-            textBoxLogin.Name = "textBoxLogin";
-            textBoxLogin.Size = new Size(165, 23);
-            textBoxLogin.TabIndex = 2;
+            textBoxEmail.Location = new Point(39, 85);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(165, 23);
+            textBoxEmail.TabIndex = 2;
             // 
             // buttonLogowanie
             // 
@@ -84,7 +84,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(textBoxHaslo);
             Controls.Add(buttonLogowanie);
-            Controls.Add(textBoxLogin);
+            Controls.Add(textBoxEmail);
             Controls.Add(labelHaslo);
             Controls.Add(labelLogin);
             Name = "Form1";
@@ -97,7 +97,7 @@
 
         private Label labelLogin;
         private Label labelHaslo;
-        private TextBox textBoxLogin;
+        private TextBox textBoxEmail;
         private Button buttonLogowanie;
         private TextBox textBoxHaslo;
     }

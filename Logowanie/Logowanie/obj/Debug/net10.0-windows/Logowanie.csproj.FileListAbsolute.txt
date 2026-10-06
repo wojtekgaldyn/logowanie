@@ -16,3 +16,4 @@ C:\Users\Wojtek\Documents\logowanie\Logowanie\Logowanie\obj\Debug\net10.0-window
 C:\Users\Wojtek\Documents\logowanie\Logowanie\Logowanie\obj\Debug\net10.0-windows\Logowanie.pdb
 C:\Users\Wojtek\Documents\logowanie\Logowanie\Logowanie\obj\Debug\net10.0-windows\Logowanie.genruntimeconfig.cache
 C:\Users\Wojtek\Documents\logowanie\Logowanie\Logowanie\obj\Debug\net10.0-windows\ref\Logowanie.dll
+C:\Users\Wojtek\Documents\logowanie\Logowanie\Logowanie\obj\Debug\net10.0-windows\Logowanie.EdytujForm.resources

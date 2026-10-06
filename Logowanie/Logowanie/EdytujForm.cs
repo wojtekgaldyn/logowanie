@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Text.Json;
 using System.Net.Http.Headers;
-using Microsoft.VisualBasic.ApplicationServices;
+using System.Text;
+using System.Text.Json;
+using System.Windows.Forms;
 
 namespace Logowanie
 {
-    public partial class ProfilForm : Form
+    public partial class EdytujForm : Form
     {
         private string token;
-        public ProfilForm(string token)
+        public EdytujForm(string token)
         {
             InitializeComponent();
             this.token = token;
@@ -34,9 +33,8 @@ namespace Logowanie
                     OdpowiedzNaLogowanie odpowiedzNaPobranie = JsonSerializer.Deserialize<OdpowiedzNaLogowanie>(wynik);
                     Uzytkownik uzytkownik = odpowiedzNaPobranie.Uzytkownik;
 
-                    labelPobranaNazwa.Text = uzytkownik.NazwaUzytkownika;
-                    labelPobranyEmail.Text = uzytkownik.Email;
-                    labelPobraneBio.Text = uzytkownik.Bio;
+                    labelAktualnaNazwa.Text = $"Aktualna nazwa: {uzytkownik.NazwaUzytkownika}";
+                    labelAktualneBio.Text = $"Aktualne Bio: {uzytkownik.Bio}";
                 }
                 else
                 {
@@ -48,23 +46,25 @@ namespace Logowanie
                 MessageBox.Show("Blad polaczenia" + ex.Message);
             }
         }
+        private void labeledytujEmail_Click(object sender, EventArgs e)
+        {
+            using HttpClient klient = new HttpClient();
+            klient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+        }
 
-        private void labelEmail_Click(object sender, EventArgs e)
+        private void EdytujForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void labelBio_Click(object sender, EventArgs e)
+        private void buttonEdytujBio_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonEdytuj_Click(object sender, EventArgs e)
+        private void buttonEdytujNazwe_Click(object sender, EventArgs e)
         {
-            EdytujForm edytujForm = new EdytujForm(token);
-            this.Hide();
-            edytujForm.ShowDialog();
-            this.Show();
+
         }
     }
 }
