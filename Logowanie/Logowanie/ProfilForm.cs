@@ -14,41 +14,13 @@ namespace Logowanie
     public partial class ProfilForm : Form
     {
         private string token;
+        private KlientApi api;
         public ProfilForm(string token)
         {
             InitializeComponent();
             this.token = token;
-            PobierzProfil();
+            api = new KlientApi(token);
         }
-        private async void PobierzProfil()
-        {
-            using HttpClient klient = new HttpClient();
-            klient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-            try
-            {
-                HttpResponseMessage odpowiedzApi = await klient.GetAsync("http://localhost:3000/api/auth/me");
-                string wynik = await odpowiedzApi.Content.ReadAsStringAsync();
-                if (odpowiedzApi.IsSuccessStatusCode)
-                {
-                    OdpowiedzNaLogowanie odpowiedzNaPobranie = JsonSerializer.Deserialize<OdpowiedzNaLogowanie>(wynik);
-                    Uzytkownik uzytkownik = odpowiedzNaPobranie.Uzytkownik;
-
-                    labelPobranaNazwa.Text = uzytkownik.NazwaUzytkownika;
-                    labelPobranyEmail.Text = uzytkownik.Email;
-                    labelPobraneBio.Text = uzytkownik.Bio;
-                }
-                else
-                {
-                    MessageBox.Show("Nie udalo sie pobrac profilu" + wynik);
-                }
-            }
-            catch (HttpRequestException ex)
-            {
-                MessageBox.Show("Blad polaczenia" + ex.Message);
-            }
-        }
-
         private void labelEmail_Click(object sender, EventArgs e)
         {
 
@@ -65,6 +37,15 @@ namespace Logowanie
             this.Hide();
             edytujForm.ShowDialog();
             this.Show();
+        }
+
+        private async void ProfilForm_Load(object sender, EventArgs e)
+        {
+            Uzytkownik uzytkownik = await api.PobierzProfil();
+
+            labelPobranaNazwa.Text = uzytkownik.NazwaUzytkownika;
+            labelPobranyEmail.Text = uzytkownik.Email;
+            labelPobraneBio.Text = uzytkownik.Bio;
         }
     }
 }

@@ -117,6 +117,7 @@
             Controls.Add(labelNazwaUzytkownika);
             Name = "ProfilForm";
             Text = "Profil";
+            Load += ProfilForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

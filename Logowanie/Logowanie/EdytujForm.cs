@@ -13,48 +13,32 @@ namespace Logowanie
     public partial class EdytujForm : Form
     {
         private string token;
+        private KlientApi api;
         public EdytujForm(string token)
         {
             InitializeComponent();
             this.token = token;
-            PobierzProfil();
-        }
-        private async void PobierzProfil()
-        {
-            using HttpClient klient = new HttpClient();
-            klient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-            try
-            {
-                HttpResponseMessage odpowiedzApi = await klient.GetAsync("http://localhost:3000/api/auth/me");
-                string wynik = await odpowiedzApi.Content.ReadAsStringAsync();
-                if (odpowiedzApi.IsSuccessStatusCode)
-                {
-                    OdpowiedzNaLogowanie odpowiedzNaPobranie = JsonSerializer.Deserialize<OdpowiedzNaLogowanie>(wynik);
-                    Uzytkownik uzytkownik = odpowiedzNaPobranie.Uzytkownik;
-
-                    labelAktualnaNazwa.Text = $"Aktualna nazwa: {uzytkownik.NazwaUzytkownika}";
-                    labelAktualneBio.Text = $"Aktualne Bio: {uzytkownik.Bio}";
-                }
-                else
-                {
-                    MessageBox.Show("Nie udalo sie pobrac profilu" + wynik);
-                }
-            }
-            catch (HttpRequestException ex)
-            {
-                MessageBox.Show("Blad polaczenia" + ex.Message);
-            }
+            api = new KlientApi(token);
         }
         private void labeledytujEmail_Click(object sender, EventArgs e)
         {
             using HttpClient klient = new HttpClient();
             klient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            try
+            {
+
+            }
+            catch 
+            {
+
+            }
         }
 
-        private void EdytujForm_Load(object sender, EventArgs e)
+        private async void EdytujForm_Load(object sender, EventArgs e)
         {
-
+            Uzytkownik uzytkownik = await api.PobierzProfil();
+            labelAktualnaNazwa.Text = $"Aktualna nazwa uzytkownika: {uzytkownik.NazwaUzytkownika}";
+            labelAktualneBio.Text = $"Aktualne Bio: {uzytkownik.Bio}";
         }
 
         private void buttonEdytujBio_Click(object sender, EventArgs e)
