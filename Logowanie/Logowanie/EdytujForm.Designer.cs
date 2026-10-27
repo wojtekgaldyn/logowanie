@@ -32,8 +32,12 @@
             labeledytujEmail = new Label();
             buttonEdytujNazwe = new Button();
             buttonEdytujBio = new Button();
-            labelAktualnaNazwa = new Label();
+            labelNazwa = new Label();
+            labelBio = new Label();
+            textBoxBio = new TextBox();
+            textBoxNazwa = new TextBox();
             labelAktualneBio = new Label();
+            labelAktualnaNazwa = new Label();
             SuspendLayout();
             // 
             // label1
@@ -75,31 +79,67 @@
             buttonEdytujBio.UseVisualStyleBackColor = true;
             buttonEdytujBio.Click += buttonEdytujBio_Click;
             // 
-            // labelAktualnaNazwa
+            // labelNazwa
             // 
-            labelAktualnaNazwa.AutoSize = true;
-            labelAktualnaNazwa.Location = new Point(33, 74);
-            labelAktualnaNazwa.Name = "labelAktualnaNazwa";
-            labelAktualnaNazwa.Size = new Size(90, 15);
-            labelAktualnaNazwa.TabIndex = 4;
-            labelAktualnaNazwa.Text = "Aktualna nazwa";
+            labelNazwa.AutoSize = true;
+            labelNazwa.Location = new Point(33, 74);
+            labelNazwa.Name = "labelNazwa";
+            labelNazwa.Size = new Size(90, 15);
+            labelNazwa.TabIndex = 4;
+            labelNazwa.Text = "Aktualna nazwa";
+            // 
+            // labelBio
+            // 
+            labelBio.AutoSize = true;
+            labelBio.Location = new Point(381, 74);
+            labelBio.Name = "labelBio";
+            labelBio.Size = new Size(74, 15);
+            labelBio.TabIndex = 5;
+            labelBio.Text = "Aktualna bio";
+            // 
+            // textBoxBio
+            // 
+            textBoxBio.Location = new Point(463, 36);
+            textBoxBio.Name = "textBoxBio";
+            textBoxBio.Size = new Size(169, 23);
+            textBoxBio.TabIndex = 6;
+            // 
+            // textBoxNazwa
+            // 
+            textBoxNazwa.Location = new Point(118, 36);
+            textBoxNazwa.Name = "textBoxNazwa";
+            textBoxNazwa.Size = new Size(169, 23);
+            textBoxNazwa.TabIndex = 7;
             // 
             // labelAktualneBio
             // 
             labelAktualneBio.AutoSize = true;
-            labelAktualneBio.Location = new Point(381, 74);
+            labelAktualneBio.Location = new Point(463, 74);
             labelAktualneBio.Name = "labelAktualneBio";
-            labelAktualneBio.Size = new Size(74, 15);
-            labelAktualneBio.TabIndex = 5;
-            labelAktualneBio.Text = "Aktualna bio";
+            labelAktualneBio.Size = new Size(30, 15);
+            labelAktualneBio.TabIndex = 8;
+            labelAktualneBio.Text = "brak";
+            // 
+            // labelAktualnaNazwa
+            // 
+            labelAktualnaNazwa.AutoSize = true;
+            labelAktualnaNazwa.Location = new Point(129, 74);
+            labelAktualnaNazwa.Name = "labelAktualnaNazwa";
+            labelAktualnaNazwa.Size = new Size(30, 15);
+            labelAktualnaNazwa.TabIndex = 9;
+            labelAktualnaNazwa.Text = "brak";
             // 
             // EdytujForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelAktualneBio);
             Controls.Add(labelAktualnaNazwa);
+            Controls.Add(labelAktualneBio);
+            Controls.Add(textBoxNazwa);
+            Controls.Add(textBoxBio);
+            Controls.Add(labelBio);
+            Controls.Add(labelNazwa);
             Controls.Add(buttonEdytujBio);
             Controls.Add(buttonEdytujNazwe);
             Controls.Add(labeledytujEmail);
@@ -117,7 +157,11 @@
         private Label labeledytujEmail;
         private Button buttonEdytujNazwe;
         private Button buttonEdytujBio;
-        private Label labelAktualnaNazwa;
+        private Label labelNazwa;
+        private Label labelBio;
+        private TextBox textBoxBio;
+        private TextBox textBoxNazwa;
         private Label labelAktualneBio;
+        private Label labelAktualnaNazwa;
     }
 }
