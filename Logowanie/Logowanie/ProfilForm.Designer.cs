@@ -95,7 +95,7 @@
             // 
             // buttonEdytuj
             // 
-            buttonEdytuj.Location = new Point(295, 339);
+            buttonEdytuj.Location = new Point(35, 352);
             buttonEdytuj.Name = "buttonEdytuj";
             buttonEdytuj.Size = new Size(75, 23);
             buttonEdytuj.TabIndex = 6;

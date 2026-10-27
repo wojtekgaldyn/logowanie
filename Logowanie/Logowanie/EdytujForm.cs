@@ -42,7 +42,7 @@ namespace Logowanie
 
             var dane = new
             {
-                Bio = textBoxBio.Text,
+                bio = textBoxBio.Text,
             };
             string daneJson = JsonSerializer.Serialize(dane);
             using StringContent zawartosc = new StringContent(daneJson, Encoding.UTF8, "application/json");
@@ -50,7 +50,7 @@ namespace Logowanie
 
             try
             {
-                HttpResponseMessage odpowiedzApi = await klient.PatchAsync("http://localhost:8080/api/auth/me", zawartosc);
+                HttpResponseMessage odpowiedzApi = await klient.PatchAsync("https://api.54-36-162-208.sslip.io/api/auth/me", zawartosc);
                 string wynik = await odpowiedzApi.Content.ReadAsStringAsync();
                 if (odpowiedzApi.IsSuccessStatusCode)
                 {
@@ -84,7 +84,7 @@ namespace Logowanie
             using StringContent zawartosc = new StringContent(daneJson, Encoding.UTF8, "application/json");
             try
             {
-                HttpResponseMessage odpowiedzApi = await klient.PatchAsync("http://localhost:8080/api/auth/me", zawartosc);
+                HttpResponseMessage odpowiedzApi = await klient.PatchAsync("https://api.54-36-162-208.sslip.io/api/auth/me", zawartosc);
                 string wynik = await odpowiedzApi.Content.ReadAsStringAsync();
                 if (odpowiedzApi.IsSuccessStatusCode)
                 {
