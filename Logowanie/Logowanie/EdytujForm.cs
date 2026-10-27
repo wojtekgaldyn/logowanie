@@ -25,7 +25,7 @@ namespace Logowanie
         }
         private void labeledytujEmail_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private async void EdytujForm_Load(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Logowanie
             };
             string daneJson = JsonSerializer.Serialize(dane);
             using StringContent zawartosc = new StringContent(daneJson, Encoding.UTF8, "application/json");
-            
+
 
             try
             {
@@ -102,6 +102,11 @@ namespace Logowanie
             {
                 MessageBox.Show("Błąd połączenia: " + ex.Message);
             }
+        }
+
+        private void buttonPowrot_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

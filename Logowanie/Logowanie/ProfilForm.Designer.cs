@@ -35,6 +35,7 @@
             labelPobranyEmail = new Label();
             labelPobraneBio = new Label();
             buttonEdytuj = new Button();
+            buttonWyloguj = new Button();
             SuspendLayout();
             // 
             // labelNazwaUzytkownika
@@ -95,19 +96,30 @@
             // 
             // buttonEdytuj
             // 
-            buttonEdytuj.Location = new Point(35, 352);
+            buttonEdytuj.Location = new Point(537, 352);
             buttonEdytuj.Name = "buttonEdytuj";
-            buttonEdytuj.Size = new Size(75, 23);
+            buttonEdytuj.Size = new Size(98, 23);
             buttonEdytuj.TabIndex = 6;
-            buttonEdytuj.Text = "Edytuj";
+            buttonEdytuj.Text = "Edytuj profil";
             buttonEdytuj.UseVisualStyleBackColor = true;
             buttonEdytuj.Click += buttonEdytuj_Click;
+            // 
+            // buttonWyloguj
+            // 
+            buttonWyloguj.Location = new Point(641, 352);
+            buttonWyloguj.Name = "buttonWyloguj";
+            buttonWyloguj.Size = new Size(75, 23);
+            buttonWyloguj.TabIndex = 7;
+            buttonWyloguj.Text = "Wyloguj";
+            buttonWyloguj.UseVisualStyleBackColor = true;
+            buttonWyloguj.Click += buttonWyloguj_Click;
             // 
             // ProfilForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonWyloguj);
             Controls.Add(buttonEdytuj);
             Controls.Add(labelPobraneBio);
             Controls.Add(labelPobranyEmail);
@@ -131,5 +143,6 @@
         private Label labelPobranyEmail;
         private Label labelPobraneBio;
         private Button buttonEdytuj;
+        private Button buttonWyloguj;
     }
 }

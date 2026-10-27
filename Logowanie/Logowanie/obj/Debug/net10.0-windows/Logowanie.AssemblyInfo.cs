@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Logowanie")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b45f7d7e12ddf4a5cdb1fe401a93327efebe5a1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fc2d9fa333b78dc649c89e8f8544af082d85601")]
 [assembly: System.Reflection.AssemblyProductAttribute("Logowanie")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Logowanie")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

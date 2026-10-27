@@ -38,6 +38,7 @@
             textBoxNazwa = new TextBox();
             labelAktualneBio = new Label();
             labelAktualnaNazwa = new Label();
+            buttonPowrot = new Button();
             SuspendLayout();
             // 
             // label1
@@ -129,11 +130,22 @@
             labelAktualnaNazwa.TabIndex = 9;
             labelAktualnaNazwa.Text = "brak";
             // 
+            // buttonPowrot
+            // 
+            buttonPowrot.Location = new Point(557, 391);
+            buttonPowrot.Name = "buttonPowrot";
+            buttonPowrot.Size = new Size(120, 23);
+            buttonPowrot.TabIndex = 10;
+            buttonPowrot.Text = "Wroc do profilu";
+            buttonPowrot.UseVisualStyleBackColor = true;
+            buttonPowrot.Click += buttonPowrot_Click;
+            // 
             // EdytujForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonPowrot);
             Controls.Add(labelAktualnaNazwa);
             Controls.Add(labelAktualneBio);
             Controls.Add(textBoxNazwa);
@@ -163,5 +175,6 @@
         private TextBox textBoxNazwa;
         private Label labelAktualneBio;
         private Label labelAktualnaNazwa;
+        private Button buttonPowrot;
     }
 }

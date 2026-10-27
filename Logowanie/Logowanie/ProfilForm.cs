@@ -47,5 +47,30 @@ namespace Logowanie
             labelPobranyEmail.Text = uzytkownik.Email;
             labelPobraneBio.Text = uzytkownik.Bio;
         }
+
+        private async void buttonWyloguj_Click(object sender, EventArgs e)
+        {
+            using HttpClient klient = new HttpClient();
+            klient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            try
+            {
+                HttpResponseMessage odpowiedzApi = await klient.PostAsync("https://api.54-36-162-208.sslip.io/api/auth/logout", null);
+                string wynik = await odpowiedzApi.Content.ReadAsStringAsync();
+                if (!odpowiedzApi.IsSuccessStatusCode)
+                {
+                    throw new Exception("Nie udało się wylogować: " + wynik);
+                }
+                else
+                {
+                    MessageBox.Show("Wylogowano pomyślnie.");
+                    this.Close();
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show("Błąd: " + ex.Message);
+            }
+        }
     }
 }
