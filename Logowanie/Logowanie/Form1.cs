@@ -12,14 +12,13 @@ namespace Logowanie
         {
             InitializeComponent();
         }
-
-        private async void buttonLogowanie_Click(object sender, EventArgs e)
+        private async void materialButtonLogowanie_Click(object sender, EventArgs e)
         {
             using HttpClient klient = new HttpClient();
             var dane = new
             {
-                email = textBoxEmail.Text,
-                password = textBoxHaslo.Text,
+                email = TextBoxEmail.Text,
+                password = TextBoxHaslo.Text,
             };
 
             string daneJson = JsonSerializer.Serialize(dane);
@@ -49,12 +48,7 @@ namespace Logowanie
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void buttonRejestracja_Click(object sender, EventArgs e)
+        private async void buttonRejestracja_Click_1(object sender, EventArgs e)
         {
             string email = textBoxEmailRejestracja.Text.Trim();
             string haslo = textBoxHasloRejestracja.Text;
@@ -87,7 +81,7 @@ namespace Logowanie
                 }
                 else
                 {
-                    MessageBox.Show("Rejestracja nie powiodła się.\n" +"Kod HTTP: " + (int)odpowiedz.StatusCode +"\n" + wynik);
+                    MessageBox.Show("Rejestracja nie powiodła się.\n" + "Kod HTTP: " + (int)odpowiedz.StatusCode + "\n" + wynik);
                 }
             }
             catch (HttpRequestException ex)

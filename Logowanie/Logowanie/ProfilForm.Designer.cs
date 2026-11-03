@@ -28,105 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelNazwaUzytkownika = new Label();
-            labelEmail = new Label();
-            labelBio = new Label();
-            labelPobranaNazwa = new Label();
-            labelPobranyEmail = new Label();
-            labelPobraneBio = new Label();
-            buttonEdytuj = new Button();
-            buttonWyloguj = new Button();
+            materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            label1 = new Label();
+            buttonWyloguj = new MaterialSkin.Controls.MaterialButton();
+            buttonEdytuj = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
-            // labelNazwaUzytkownika
+            // materialListView1
             // 
-            labelNazwaUzytkownika.AutoSize = true;
-            labelNazwaUzytkownika.Location = new Point(35, 45);
-            labelNazwaUzytkownika.Name = "labelNazwaUzytkownika";
-            labelNazwaUzytkownika.Size = new Size(114, 15);
-            labelNazwaUzytkownika.TabIndex = 0;
-            labelNazwaUzytkownika.Text = "Nazwa uzytkownika:";
+            materialListView1.AutoSizeTable = true;
+            materialListView1.BackColor = Color.FromArgb(255, 255, 255);
+            materialListView1.BorderStyle = BorderStyle.None;
+            materialListView1.Depth = 0;
+            materialListView1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            materialListView1.FullRowSelect = true;
+            materialListView1.HeaderStyle = ColumnHeaderStyle.None;
+            materialListView1.Location = new Point(37, 115);
+            materialListView1.MinimumSize = new Size(200, 100);
+            materialListView1.MouseLocation = new Point(-1, -1);
+            materialListView1.MouseState = MaterialSkin.MouseState.OUT;
+            materialListView1.Name = "materialListView1";
+            materialListView1.OwnerDraw = true;
+            materialListView1.Scrollable = false;
+            materialListView1.Size = new Size(200, 100);
+            materialListView1.TabIndex = 8;
+            materialListView1.UseCompatibleStateImageBehavior = false;
+            materialListView1.View = View.Details;
             // 
-            // labelEmail
+            // label1
             // 
-            labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(35, 105);
-            labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(39, 15);
-            labelEmail.TabIndex = 1;
-            labelEmail.Text = "Email:";
-            labelEmail.Click += labelEmail_Click;
-            // 
-            // labelBio
-            // 
-            labelBio.AutoSize = true;
-            labelBio.Location = new Point(35, 171);
-            labelBio.Name = "labelBio";
-            labelBio.Size = new Size(27, 15);
-            labelBio.TabIndex = 2;
-            labelBio.Text = "Bio:";
-            labelBio.Click += labelBio_Click;
-            // 
-            // labelPobranaNazwa
-            // 
-            labelPobranaNazwa.AutoSize = true;
-            labelPobranaNazwa.Location = new Point(334, 45);
-            labelPobranaNazwa.Name = "labelPobranaNazwa";
-            labelPobranaNazwa.Size = new Size(42, 15);
-            labelPobranaNazwa.TabIndex = 3;
-            labelPobranaNazwa.Text = "Nazwa";
-            // 
-            // labelPobranyEmail
-            // 
-            labelPobranyEmail.AutoSize = true;
-            labelPobranyEmail.Location = new Point(334, 105);
-            labelPobranyEmail.Name = "labelPobranyEmail";
-            labelPobranyEmail.Size = new Size(36, 15);
-            labelPobranyEmail.TabIndex = 4;
-            labelPobranyEmail.Text = "Email";
-            // 
-            // labelPobraneBio
-            // 
-            labelPobraneBio.AutoSize = true;
-            labelPobraneBio.Location = new Point(334, 171);
-            labelPobraneBio.Name = "labelPobraneBio";
-            labelPobraneBio.Size = new Size(24, 15);
-            labelPobraneBio.TabIndex = 5;
-            labelPobraneBio.Text = "Bio";
-            // 
-            // buttonEdytuj
-            // 
-            buttonEdytuj.Location = new Point(537, 352);
-            buttonEdytuj.Name = "buttonEdytuj";
-            buttonEdytuj.Size = new Size(98, 23);
-            buttonEdytuj.TabIndex = 6;
-            buttonEdytuj.Text = "Edytuj profil";
-            buttonEdytuj.UseVisualStyleBackColor = true;
-            buttonEdytuj.Click += buttonEdytuj_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label1.Location = new Point(258, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 42);
+            label1.TabIndex = 9;
+            label1.Text = "Twoj profil";
             // 
             // buttonWyloguj
             // 
-            buttonWyloguj.Location = new Point(641, 352);
+            buttonWyloguj.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            buttonWyloguj.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            buttonWyloguj.Depth = 0;
+            buttonWyloguj.HighEmphasis = true;
+            buttonWyloguj.Icon = null;
+            buttonWyloguj.Location = new Point(698, 339);
+            buttonWyloguj.Margin = new Padding(4, 6, 4, 6);
+            buttonWyloguj.MouseState = MaterialSkin.MouseState.HOVER;
             buttonWyloguj.Name = "buttonWyloguj";
-            buttonWyloguj.Size = new Size(75, 23);
-            buttonWyloguj.TabIndex = 7;
+            buttonWyloguj.NoAccentTextColor = Color.Empty;
+            buttonWyloguj.Size = new Size(89, 36);
+            buttonWyloguj.TabIndex = 11;
             buttonWyloguj.Text = "Wyloguj";
+            buttonWyloguj.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            buttonWyloguj.UseAccentColor = false;
             buttonWyloguj.UseVisualStyleBackColor = true;
-            buttonWyloguj.Click += buttonWyloguj_Click;
+            buttonWyloguj.Click += buttonWyloguj_Click_1;
+            // 
+            // buttonEdytuj
+            // 
+            buttonEdytuj.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            buttonEdytuj.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            buttonEdytuj.Depth = 0;
+            buttonEdytuj.HighEmphasis = true;
+            buttonEdytuj.Icon = null;
+            buttonEdytuj.Location = new Point(561, 339);
+            buttonEdytuj.Margin = new Padding(4, 6, 4, 6);
+            buttonEdytuj.MouseState = MaterialSkin.MouseState.HOVER;
+            buttonEdytuj.Name = "buttonEdytuj";
+            buttonEdytuj.NoAccentTextColor = Color.Empty;
+            buttonEdytuj.Size = new Size(128, 36);
+            buttonEdytuj.TabIndex = 12;
+            buttonEdytuj.Text = "Edytuj profil";
+            buttonEdytuj.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            buttonEdytuj.UseAccentColor = false;
+            buttonEdytuj.UseVisualStyleBackColor = true;
+            buttonEdytuj.Click += buttonEdytuj_Click;
             // 
             // ProfilForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttonWyloguj);
             Controls.Add(buttonEdytuj);
-            Controls.Add(labelPobraneBio);
-            Controls.Add(labelPobranyEmail);
-            Controls.Add(labelPobranaNazwa);
-            Controls.Add(labelBio);
-            Controls.Add(labelEmail);
-            Controls.Add(labelNazwaUzytkownika);
+            Controls.Add(buttonWyloguj);
+            Controls.Add(label1);
+            Controls.Add(materialListView1);
             Name = "ProfilForm";
             Text = "Profil";
             Load += ProfilForm_Load;
@@ -135,14 +122,9 @@
         }
 
         #endregion
-
-        private Label labelNazwaUzytkownika;
-        private Label labelEmail;
-        private Label labelBio;
-        private Label labelPobranaNazwa;
-        private Label labelPobranyEmail;
-        private Label labelPobraneBio;
-        private Button buttonEdytuj;
-        private Button buttonWyloguj;
+        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private Label label1;
+        private MaterialSkin.Controls.MaterialButton buttonWyloguj;
+        private MaterialSkin.Controls.MaterialButton buttonEdytuj;
     }
 }

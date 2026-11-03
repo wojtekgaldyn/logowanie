@@ -28,183 +28,198 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelLogin = new Label();
-            labelHaslo = new Label();
-            textBoxEmail = new TextBox();
-            textBoxHaslo = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBoxHasloRejestracja = new TextBox();
-            buttonRejestracja = new Button();
-            textBoxEmailRejestracja = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            textBoxNazwaRejestracja = new TextBox();
-            label5 = new Label();
-            buttonLogowanie = new Button();
+            materialButtonLogowanie = new MaterialSkin.Controls.MaterialButton();
+            TextBoxEmail = new MaterialSkin.Controls.MaterialTextBox();
+            TextBoxHaslo = new MaterialSkin.Controls.MaterialTextBox();
+            textBoxEmailRejestracja = new MaterialSkin.Controls.MaterialTextBox();
+            textBoxHasloRejestracja = new MaterialSkin.Controls.MaterialTextBox();
+            textBoxNazwaRejestracja = new MaterialSkin.Controls.MaterialTextBox();
+            buttonRejestracja = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
-            // 
-            // labelLogin
-            // 
-            labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(39, 81);
-            labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(72, 15);
-            labelLogin.TabIndex = 0;
-            labelLogin.Text = "Podaj email:";
-            // 
-            // labelHaslo
-            // 
-            labelHaslo.AutoSize = true;
-            labelHaslo.Location = new Point(39, 164);
-            labelHaslo.Name = "labelHaslo";
-            labelHaslo.Size = new Size(71, 15);
-            labelHaslo.TabIndex = 1;
-            labelHaslo.Text = "Podaj haslo:";
-            // 
-            // textBoxEmail
-            // 
-            textBoxEmail.Location = new Point(39, 110);
-            textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(165, 23);
-            textBoxEmail.TabIndex = 2;
-            // 
-            // textBoxHaslo
-            // 
-            textBoxHaslo.Location = new Point(39, 194);
-            textBoxHaslo.Name = "textBoxHaslo";
-            textBoxHaslo.Size = new Size(165, 23);
-            textBoxHaslo.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F);
-            label1.Location = new Point(39, 9);
+            label1.Font = new Font("Arial", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label1.Location = new Point(21, 9);
             label1.Name = "label1";
-            label1.Size = new Size(118, 30);
+            label1.Size = new Size(197, 42);
             label1.TabIndex = 5;
             label1.Text = "Logowanie";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16F);
-            label2.Location = new Point(428, 9);
+            label2.Font = new Font("Arial", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label2.Location = new Point(454, 9);
             label2.Name = "label2";
-            label2.Size = new Size(115, 30);
+            label2.Size = new Size(202, 42);
             label2.TabIndex = 11;
             label2.Text = "Rejestracja";
             // 
-            // textBoxHasloRejestracja
+            // materialButtonLogowanie
             // 
-            textBoxHasloRejestracja.Location = new Point(428, 194);
-            textBoxHasloRejestracja.Name = "textBoxHasloRejestracja";
-            textBoxHasloRejestracja.Size = new Size(165, 23);
-            textBoxHasloRejestracja.TabIndex = 10;
+            materialButtonLogowanie.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButtonLogowanie.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButtonLogowanie.Depth = 0;
+            materialButtonLogowanie.Font = new Font("Segoe UI", 11F);
+            materialButtonLogowanie.HighEmphasis = true;
+            materialButtonLogowanie.Icon = null;
+            materialButtonLogowanie.Location = new Point(21, 193);
+            materialButtonLogowanie.Margin = new Padding(4, 6, 4, 6);
+            materialButtonLogowanie.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButtonLogowanie.Name = "materialButtonLogowanie";
+            materialButtonLogowanie.NoAccentTextColor = Color.Empty;
+            materialButtonLogowanie.Size = new Size(86, 36);
+            materialButtonLogowanie.TabIndex = 14;
+            materialButtonLogowanie.Text = "Zaloguj";
+            materialButtonLogowanie.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButtonLogowanie.UseAccentColor = false;
+            materialButtonLogowanie.UseVisualStyleBackColor = true;
+            materialButtonLogowanie.Click += materialButtonLogowanie_Click;
             // 
-            // buttonRejestracja
+            // TextBoxEmail
             // 
-            buttonRejestracja.Location = new Point(428, 347);
-            buttonRejestracja.Name = "buttonRejestracja";
-            buttonRejestracja.Size = new Size(190, 23);
-            buttonRejestracja.TabIndex = 9;
-            buttonRejestracja.Text = "Zarejestruj uzytkownika";
-            buttonRejestracja.UseVisualStyleBackColor = true;
-            buttonRejestracja.Click += buttonRejestracja_Click;
+            TextBoxEmail.AnimateReadOnly = false;
+            TextBoxEmail.BorderStyle = BorderStyle.None;
+            TextBoxEmail.Depth = 0;
+            TextBoxEmail.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            TextBoxEmail.Hint = "Podaj email:";
+            TextBoxEmail.LeadingIcon = null;
+            TextBoxEmail.Location = new Point(21, 78);
+            TextBoxEmail.MaxLength = 50;
+            TextBoxEmail.MouseState = MaterialSkin.MouseState.OUT;
+            TextBoxEmail.Multiline = false;
+            TextBoxEmail.Name = "TextBoxEmail";
+            TextBoxEmail.Size = new Size(243, 50);
+            TextBoxEmail.TabIndex = 15;
+            TextBoxEmail.Text = "";
+            TextBoxEmail.TrailingIcon = null;
+            // 
+            // TextBoxHaslo
+            // 
+            TextBoxHaslo.AnimateReadOnly = false;
+            TextBoxHaslo.BorderStyle = BorderStyle.None;
+            TextBoxHaslo.Depth = 0;
+            TextBoxHaslo.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            TextBoxHaslo.Hint = "Podaj haslo:";
+            TextBoxHaslo.LeadingIcon = null;
+            TextBoxHaslo.Location = new Point(21, 134);
+            TextBoxHaslo.MaxLength = 50;
+            TextBoxHaslo.MouseState = MaterialSkin.MouseState.OUT;
+            TextBoxHaslo.Multiline = false;
+            TextBoxHaslo.Name = "TextBoxHaslo";
+            TextBoxHaslo.Size = new Size(243, 50);
+            TextBoxHaslo.TabIndex = 16;
+            TextBoxHaslo.Text = "";
+            TextBoxHaslo.TrailingIcon = null;
             // 
             // textBoxEmailRejestracja
             // 
-            textBoxEmailRejestracja.Location = new Point(428, 110);
+            textBoxEmailRejestracja.AnimateReadOnly = false;
+            textBoxEmailRejestracja.BorderStyle = BorderStyle.None;
+            textBoxEmailRejestracja.Depth = 0;
+            textBoxEmailRejestracja.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            textBoxEmailRejestracja.Hint = "Podaj email:";
+            textBoxEmailRejestracja.LeadingIcon = null;
+            textBoxEmailRejestracja.Location = new Point(454, 77);
+            textBoxEmailRejestracja.MaxLength = 50;
+            textBoxEmailRejestracja.MouseState = MaterialSkin.MouseState.OUT;
+            textBoxEmailRejestracja.Multiline = false;
             textBoxEmailRejestracja.Name = "textBoxEmailRejestracja";
-            textBoxEmailRejestracja.Size = new Size(165, 23);
-            textBoxEmailRejestracja.TabIndex = 8;
+            textBoxEmailRejestracja.Size = new Size(243, 50);
+            textBoxEmailRejestracja.TabIndex = 17;
+            textBoxEmailRejestracja.Text = "";
+            textBoxEmailRejestracja.TrailingIcon = null;
             // 
-            // label3
+            // textBoxHasloRejestracja
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(428, 164);
-            label3.Name = "label3";
-            label3.Size = new Size(71, 15);
-            label3.TabIndex = 7;
-            label3.Text = "Podaj haslo:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(428, 81);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 15);
-            label4.TabIndex = 6;
-            label4.Text = "Podaj email:";
+            textBoxHasloRejestracja.AnimateReadOnly = false;
+            textBoxHasloRejestracja.BorderStyle = BorderStyle.None;
+            textBoxHasloRejestracja.Depth = 0;
+            textBoxHasloRejestracja.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            textBoxHasloRejestracja.Hint = "Podaj haslo:";
+            textBoxHasloRejestracja.LeadingIcon = null;
+            textBoxHasloRejestracja.Location = new Point(454, 133);
+            textBoxHasloRejestracja.MaxLength = 50;
+            textBoxHasloRejestracja.MouseState = MaterialSkin.MouseState.OUT;
+            textBoxHasloRejestracja.Multiline = false;
+            textBoxHasloRejestracja.Name = "textBoxHasloRejestracja";
+            textBoxHasloRejestracja.Size = new Size(243, 50);
+            textBoxHasloRejestracja.TabIndex = 18;
+            textBoxHasloRejestracja.Text = "";
+            textBoxHasloRejestracja.TrailingIcon = null;
             // 
             // textBoxNazwaRejestracja
             // 
-            textBoxNazwaRejestracja.Location = new Point(428, 275);
+            textBoxNazwaRejestracja.AnimateReadOnly = false;
+            textBoxNazwaRejestracja.BorderStyle = BorderStyle.None;
+            textBoxNazwaRejestracja.Depth = 0;
+            textBoxNazwaRejestracja.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            textBoxNazwaRejestracja.Hint = "Podaj nazwe uzytkownika:";
+            textBoxNazwaRejestracja.LeadingIcon = null;
+            textBoxNazwaRejestracja.Location = new Point(454, 193);
+            textBoxNazwaRejestracja.MaxLength = 50;
+            textBoxNazwaRejestracja.MouseState = MaterialSkin.MouseState.OUT;
+            textBoxNazwaRejestracja.Multiline = false;
             textBoxNazwaRejestracja.Name = "textBoxNazwaRejestracja";
-            textBoxNazwaRejestracja.Size = new Size(165, 23);
-            textBoxNazwaRejestracja.TabIndex = 13;
+            textBoxNazwaRejestracja.Size = new Size(243, 50);
+            textBoxNazwaRejestracja.TabIndex = 19;
+            textBoxNazwaRejestracja.Text = "";
+            textBoxNazwaRejestracja.TrailingIcon = null;
             // 
-            // label5
+            // buttonRejestracja
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(428, 245);
-            label5.Name = "label5";
-            label5.Size = new Size(139, 15);
-            label5.TabIndex = 12;
-            label5.Text = "Podaj nazwe uztkownika:";
-            // 
-            // buttonLogowanie
-            // 
-            buttonLogowanie.Location = new Point(39, 347);
-            buttonLogowanie.Name = "buttonLogowanie";
-            buttonLogowanie.Size = new Size(88, 23);
-            buttonLogowanie.TabIndex = 3;
-            buttonLogowanie.Text = "Zaloguj";
-            buttonLogowanie.UseVisualStyleBackColor = true;
-            buttonLogowanie.Click += buttonLogowanie_Click;
+            buttonRejestracja.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            buttonRejestracja.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            buttonRejestracja.Depth = 0;
+            buttonRejestracja.HighEmphasis = true;
+            buttonRejestracja.Icon = null;
+            buttonRejestracja.Location = new Point(454, 252);
+            buttonRejestracja.Margin = new Padding(4, 6, 4, 6);
+            buttonRejestracja.MouseState = MaterialSkin.MouseState.HOVER;
+            buttonRejestracja.Name = "buttonRejestracja";
+            buttonRejestracja.NoAccentTextColor = Color.Empty;
+            buttonRejestracja.Size = new Size(225, 36);
+            buttonRejestracja.TabIndex = 20;
+            buttonRejestracja.Text = "Zarejestruj uzytkownika";
+            buttonRejestracja.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            buttonRejestracja.UseAccentColor = false;
+            buttonRejestracja.UseVisualStyleBackColor = true;
+            buttonRejestracja.Click += buttonRejestracja_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBoxNazwaRejestracja);
-            Controls.Add(label5);
-            Controls.Add(label2);
-            Controls.Add(textBoxHasloRejestracja);
             Controls.Add(buttonRejestracja);
+            Controls.Add(textBoxNazwaRejestracja);
+            Controls.Add(textBoxHasloRejestracja);
             Controls.Add(textBoxEmailRejestracja);
-            Controls.Add(label3);
-            Controls.Add(label4);
+            Controls.Add(TextBoxHaslo);
+            Controls.Add(TextBoxEmail);
+            Controls.Add(materialButtonLogowanie);
+            Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBoxHaslo);
-            Controls.Add(buttonLogowanie);
-            Controls.Add(textBoxEmail);
-            Controls.Add(labelHaslo);
-            Controls.Add(labelLogin);
             Name = "Form1";
             Text = "Logowanie";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label labelLogin;
-        private Label labelHaslo;
-        private TextBox textBoxEmail;
-        private TextBox textBoxHaslo;
         private Label label1;
         private Label label2;
-        private TextBox textBoxHasloRejestracja;
-        private Button buttonRejestracja;
-        private TextBox textBoxEmailRejestracja;
-        private Label label3;
-        private Label label4;
-        private TextBox textBoxNazwaRejestracja;
-        private Label label5;
         private Button buttonLogowanie;
+        private MaterialSkin.Controls.MaterialButton materialButtonLogowanie;
+        private MaterialSkin.Controls.MaterialTextBox TextBoxEmail;
+        private MaterialSkin.Controls.MaterialTextBox TextBoxHaslo;
+        private MaterialSkin.Controls.MaterialTextBox textBoxEmailRejestracja;
+        private MaterialSkin.Controls.MaterialTextBox textBoxHasloRejestracja;
+        private MaterialSkin.Controls.MaterialTextBox textBoxNazwaRejestracja;
+        private MaterialSkin.Controls.MaterialButton buttonRejestracja;
     }
 }

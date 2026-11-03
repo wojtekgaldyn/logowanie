@@ -23,10 +23,6 @@ namespace Logowanie
             this.token = token;
             api = new KlientApi(token);
         }
-        private void labeledytujEmail_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private async void EdytujForm_Load(object sender, EventArgs e)
         {
@@ -104,9 +100,12 @@ namespace Logowanie
             }
         }
 
-        private void buttonPowrot_Click(object sender, EventArgs e)
+        private void butonPowrot_Click(object sender, EventArgs e)
         {
+            var profilForm = new ProfilForm(token);
             this.Close();
+            profilForm.ShowDialog();
+            this.Show();
         }
     }
 }
