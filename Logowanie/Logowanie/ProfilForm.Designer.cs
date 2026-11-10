@@ -32,6 +32,7 @@
             label1 = new Label();
             buttonWyloguj = new MaterialSkin.Controls.MaterialButton();
             buttonEdytuj = new MaterialSkin.Controls.MaterialButton();
+            usunButton = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
             // materialListView1
@@ -92,7 +93,7 @@
             buttonEdytuj.Depth = 0;
             buttonEdytuj.HighEmphasis = true;
             buttonEdytuj.Icon = null;
-            buttonEdytuj.Location = new Point(561, 339);
+            buttonEdytuj.Location = new Point(426, 339);
             buttonEdytuj.Margin = new Padding(4, 6, 4, 6);
             buttonEdytuj.MouseState = MaterialSkin.MouseState.HOVER;
             buttonEdytuj.Name = "buttonEdytuj";
@@ -105,11 +106,32 @@
             buttonEdytuj.UseVisualStyleBackColor = true;
             buttonEdytuj.Click += buttonEdytuj_Click;
             // 
+            // usunButton
+            // 
+            usunButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            usunButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            usunButton.Depth = 0;
+            usunButton.HighEmphasis = true;
+            usunButton.Icon = null;
+            usunButton.Location = new Point(562, 339);
+            usunButton.Margin = new Padding(4, 6, 4, 6);
+            usunButton.MouseState = MaterialSkin.MouseState.HOVER;
+            usunButton.Name = "usunButton";
+            usunButton.NoAccentTextColor = Color.Empty;
+            usunButton.Size = new Size(128, 36);
+            usunButton.TabIndex = 13;
+            usunButton.Text = "Usun profil";
+            usunButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            usunButton.UseAccentColor = false;
+            usunButton.UseVisualStyleBackColor = true;
+            usunButton.Click += usunButton_Click;
+            // 
             // ProfilForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(usunButton);
             Controls.Add(buttonEdytuj);
             Controls.Add(buttonWyloguj);
             Controls.Add(label1);
@@ -126,5 +148,6 @@
         private Label label1;
         private MaterialSkin.Controls.MaterialButton buttonWyloguj;
         private MaterialSkin.Controls.MaterialButton buttonEdytuj;
+        private MaterialSkin.Controls.MaterialButton usunButton;
     }
 }

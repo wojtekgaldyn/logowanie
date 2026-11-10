@@ -76,5 +76,13 @@ namespace Logowanie
                 MessageBox.Show("Błąd: " + ex.Message);
             }
         }
+
+        private void usunButton_Click(object sender, EventArgs e)
+        {
+            UsuwanieProfilu usunForm = new UsuwanieProfilu(token);
+            this.Close();
+            usunForm.ShowDialog();
+            this.Show();
+        }
     }
 }
